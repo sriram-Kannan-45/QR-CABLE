@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#qr-reader {
+  width: 100% !important;
+  border: none !important;
+}
+
+#qr-reader video {
+  border-radius: 16px;
+}
+
+#qr-reader__scan_region {
+  background: #F8FAFC !important;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  html, body, #root {
+    overflow: hidden;
+    height: 100vh;
+    height: 100dvh;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+}
+
+@media screen and (max-height: 600px) {
+  html, body, #root {
+    overflow: hidden;
+  }
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior-y: contain;
+}
