@@ -1,0 +1,5 @@
+# WAVE INIT - Start Script
+# Double-click this file or run: npm run dev
+
+cd frontend/react-client
+npm run dev
